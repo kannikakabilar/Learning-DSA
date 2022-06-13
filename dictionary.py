@@ -1,7 +1,7 @@
 # Dictionary basics in Python
 
-import this
-
+# Empty dictionary can be created like this
+m = dict()
 
 thisdict = {"key": "value", "brand": "Ford", "model": "Mustang", "year": 1964}
 
