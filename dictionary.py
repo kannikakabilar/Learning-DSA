@@ -77,3 +77,61 @@ thisdict.popitem() # Removes the last inserted item
 del thisdict["brand"] # Removes the item with the specified key name
 
 thisdict.clear() # empties the dictionary
+
+# Set (like hashset)
+myset = {"apple", "banana", "cherry"}
+
+# Sets are used to store multiple items in a single variable
+# A set is a collection which is unordered, unindexed, and unchangeable (but items can be removed and added)
+
+# Sets also do not allow duplicate items - duplicate items will be ignored
+dupset = {"apple", "banana", "cherry", "apple"}
+print(dupset)
+#>> {"apple", "banana", "cherry"}
+
+print("banana" in myset) # Lookup in hashset takes on average O(1) time
+#>> True
+
+# Adding elements to set
+myset.add("orange")
+
+tropical = {"pineapple", "mango", "papaya"}
+
+myset.update(tropical) # tropical doesn't have to be a dictionary, it can be any iterable type
+
+print(myset)
+#>> {"apple", "banana", "cherry", "pineapple", "mango", "papaya"}
+
+# Joining Sets
+set1 = {"a", "b", "c"}
+set2 = {1, 2, 3}
+
+set3 = set1.union(set2)
+print(set3) # union() method returns a new set with all items from both sets
+
+set1.update(set2) # inserts items in set2 into set1
+
+# Inner Join
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+# Keep the items that exists in both set x, and set y
+x.intersection_update(y)
+
+# Or return the set that contains the items that exists in both set x, and set y
+z = x.intersection(y)
+
+# Outer Join
+# Keep the items that are not present in both sets
+x.symmetric_difference_update(y) 
+
+# Return a new set that contains only the elements that are not present in both sets
+z = x.symmetric_difference(y)
+
+# Removing Set Items
+myset.remove("banana") # If the item does not exist, remove() will raise an error
+myset.discard("banana") # If the item does not exist, discard() will NOT raise an error
+
+myset.pop() # removes the last item in set
+myset.clear() # empties the entire set
+del myset # del will delete the set completely
