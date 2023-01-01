@@ -1,2 +1,2 @@
-# Learning DataStructures
-This repository is used for learning Data Structures
+# Learning DataStructures & Algorithms
+This repository is used for learning Data Structures and Algorithms in Computer Science.
