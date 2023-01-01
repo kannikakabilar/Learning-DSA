@@ -1,2 +1,2 @@
-# Learning_DataStructures
-This repository is used to learn some basics of Data Structures
+# Learning DataStructures
+This repository is used for learning Data Structures
