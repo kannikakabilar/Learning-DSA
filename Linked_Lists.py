@@ -109,13 +109,15 @@ Output: [5,4,3,2,1]
 def reverseList(head: ListNode) -> ListNode:
     if (head is None) or (head.next is None):       # Handle empty linked list and 1-element linked list case
         return head    
-    p = head                                        # Leave a pointer to the head
-    temp = p                                        # Use temp to keep track of the previous node
-    while p is not None:                            # Traverse through p
-        temp = p
-        p = p.next
-    n = temp
-    temp = None
+    prev = None
+    current = head
+    while(current is not None):
+        next = current.next
+        current.next = prev
+        prev = current
+        current = next
+    head = prev
+    return head
 
 # Q5 Palindrome Linked List
 """
