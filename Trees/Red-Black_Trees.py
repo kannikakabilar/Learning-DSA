@@ -1,13 +1,13 @@
 # Red Black Trees
 
+# Every node has a color either red or black.
 """
 Rules That Every Red-Black Tree Follows: 
 
-1) Every node has a color either red or black.
-2) The root of the tree is always black.
-3) There are no two adjacent red nodes (A red node cannot have a red parent or red child).
-4) Every path from a node (including root) to any of its descendants NULL nodes has the same number of black nodes.
-5) All leaf nodes are black nodes.
+1) The root of the tree is always black.
+2) All children of red nodes must be black.
+3) Every leaf node has the same number of black ancestors.
+4) All leaf nodes must be black.
 """
 """
 Red-Black Trees are similar to AVL Trees but they perform less rotations.
@@ -15,6 +15,7 @@ If insertion and deletion is performed more often => Red-Black Trees
 If Search is performed more often => AVL Trees
 
 Every Red Black Tree with n nodes has height <= 2Log2(n+1) 
+Searching, Insertion, Deletion is done in => O(log(n))
 
 In the Red-Black tree, 2 tools are used to do the balancing. 
 1) Recoloring
