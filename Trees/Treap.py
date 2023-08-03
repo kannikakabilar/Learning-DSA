@@ -1,4 +1,19 @@
-# Treap (Heap Tree)
+# Treap = BST + Heap
+"""
+- each node contains a key-value and a priority-value
+- the key values follow BST-property and the priority values follow heap-property
+
+Insertion
+- insert like any BST, based on key-value
+- use avl rotations to fix heap property (compare each node with its parent)
+
+Deletion
+- delete the mentioned node, and replace it with right-most node of the left-child or left-most node of the right-child
+- perform avl rotations to fix the heap property
+"""
+
+
+# Below is Heap implementation
 """
 In a heap, the highest (or lowest) priority element is always stored at the root. 
 However, a heap is not a sorted structure; it can be regarded as being partially ordered. 
