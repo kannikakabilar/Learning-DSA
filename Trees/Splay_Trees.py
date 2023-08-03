@@ -1,6 +1,13 @@
 # Splay Trees
 """
 Splaying puts the most recently accessed elements to the root node of the tree.
+
+Insertion & deletion
+- insert and delete like normal BST
+
+Search
+- search like normal BST
+- perform AVL rotations to make the recently accessed node into the root node
 """
 
 
